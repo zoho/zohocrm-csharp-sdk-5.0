@@ -25,6 +25,39 @@ License
 
 ## Latest Version
 
+- [2.0.0](/versions/2.0.0/README.md)
+    - Added new column(api_domain) in TokenStore.
+    - Added a new key FindUser in OAuthToken.
+        - By default, the FindUser key is set to true, to set UserSignature. However, this requires the ***ZohoCRM.users.READ*** and ***ZohoCRM.org.READ*** scopes to be mandatory. If you do not want to set UserSignature, you must set the FindUser key to false.
+    - IDS param datatype changed(Long to String).
+        - GetAttachmentsParam
+        - DeleteAttachmentsParam
+        - DeleteRolesParam
+        - GetAssociatedContactRolesParam
+        - DeleteNotesParam
+        - DeleteScoringRulesParam
+        - DeleteTerritoriesParam
+        - DeassociateTerritoryUsersParam
+        - DeleteVariablesParam
+    - Note class seModule field datatype changed(Choice<String> to String).
+    - If-Modified-Since param datatype changed (String to OffsetDateTime).
+        - GetNotesHeader
+        - GetNoteHeader 
+    - Support for the following new APIs.
+        - Organization:
+            - [Get Organization Photo](https://www.zoho.com/crm/developer/docs/api/v5/get-org-img.html)
+            - [Delete Organization Photo](https://www.zoho.com/crm/developer/docs/api/v5/delete-org-img.html)
+        - Record Locking:
+            - [Record Locking Information APIs](https://www.zoho.com/crm/developer/docs/api/v5/get-record-locking-info.html)
+            - [Lock Records](https://www.zoho.com/crm/developer/docs/api/v5/lock-records.html)
+            - [Update Record Locking Information](https://www.zoho.com/crm/developer/docs/api/v5/update-record-locking-info.html)
+            - [Unlock Records](https://www.zoho.com/crm/developer/docs/api/v5/unlock-records.html)
+    - RescheduleHistory ResponseWrapper info field datatype changed(List<into> to info).
+    - ScoringRules Signal namespace field datatype changed(Choice<String> to String).
+    - Tags RecordActionWrapper lockedCount field datatype changed(Boolean to String).
+    - UsersTerritories Territory id field datatype changed(Long to String).
+    - VariablesOperations updateVariableByApiname method add new ParameterMap param.
+
 - [1.0.0](/versions/1.0.0/README.md)
 
     - C# SDK upgraded to support v5 APIs.
@@ -56,7 +89,7 @@ You can include the SDK to your project using:
     - Package Manager
 
         ```sh
-        Install-Package ZOHOCRMSDK-5.0 -Version 1.0.0
+        Install-Package ZOHOCRMSDK-5.0 -Version 2.0.0
         Install-Package MySql.Data -Version 6.9.12
         Install-Package Newtonsoft.Json -Version 11.0.1
         ```
@@ -64,7 +97,7 @@ You can include the SDK to your project using:
     - .NET  CLI
 
         ```sh
-        dotnet add package ZOHOCRMSDK-5.0 --version 1.0.0
+        dotnet add package ZOHOCRMSDK-5.0 --version 2.0.0
         dotnet add package Newtonsoft.Json --version 11.0.1
         dotnet add package MySql.Data --version 6.9.12
         ```
@@ -75,12 +108,11 @@ You can include the SDK to your project using:
 
         ```sh
         <ItemGroup>
-            <PackageReference Include="ZOHOCRMSDK-5.0" Version="1.0.0" />
+            <PackageReference Include="ZOHOCRMSDK-5.0" Version="2.0.0" />
             <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
             <PackageReference Include="MySql.Data" Version="6.9.12" />
         </ItemGroup>
         ```
-
 ---
 
 **NOTE** 
@@ -96,4 +128,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/1.0.0/README.md).
+For more details, kindly refer [here](/versions/2.0.0/README.md).
