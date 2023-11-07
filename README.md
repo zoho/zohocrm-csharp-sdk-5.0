@@ -25,7 +25,7 @@ License
 
 ## Latest Version
 
-- [2.0.0](/versions/2.0.0/README.md)
+- [2.0.0](/versions/2.0.0/ZohoCRM/README.md)
     - Added new column(api_domain) in TokenStore.
     - Added a new key FindUser in OAuthToken.
         - By default, the FindUser key is set to true, to set UserSignature. However, this requires the ***ZohoCRM.users.READ*** and ***ZohoCRM.org.READ*** scopes to be mandatory. If you do not want to set UserSignature, you must set the FindUser key to false.
@@ -58,7 +58,7 @@ License
     - UsersTerritories Territory id field datatype changed(Long to String).
     - VariablesOperations updateVariableByApiname method add new ParameterMap param.
 
-- [1.0.0](/versions/1.0.0/README.md)
+- [1.0.0](/versions/1.0.0/ZohoCRM/README.md)
 
     - C# SDK upgraded to support v5 APIs.
 
@@ -128,4 +128,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/2.0.0/README.md).
+For more details, kindly refer [here](/versions/2.0.0/ZohoCRM/README.md).
